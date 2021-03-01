@@ -13,23 +13,234 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
     <title>Artist Page</title>
   </head>
   <body>
-    <div class="main">
-      <div class="hero-image">
-        <div class="hero-text">
-          <p class="text-muted">999999999 MONTHLY LISTENERS</p>
-          <h1>Queen</h1>
-          <button type="button" class="btn btn-success">Success</button>
-          <button type="button" class="btn btn-dark">Dark</button>
-          <h6>OVERVIEW</h6>
-          <h6>RELATED ARTISTS</h6>
-          <h6>ABOUT</h6>
+    <div class="artist-page">
+        <div class="sidebar">
+          <div class="sidebar-nav d-flex flex-column align-items-start px-1">
+            <button type="button" id="spotify-btn" class="btn">
+              <img src="/assets/Spotify svg's/Spotify-logo.svg" style="width: 98px" alt="Spotify Logo" />
+            </button>
+
+            <button type="button" class="btn sidebar-btn  ">
+              <img src="/assets/Spotify svg's/svgexport-6.svg" style="width: 17px"/>
+              <p>Home</p>
+            </button>
+
+            <button type="button" class="btn sidebar-btn  ">
+              <img src="/assets/Spotify svg's/svgexport-8.svg" style="width: 17px"/>
+              <p>Search</p>
+            </button>
+
+            <button type="button" class="btn sidebar-btn  ">
+              <img src="/assets/Spotify svg's/svgexport-10.svg" style="width: 17px"/>
+              <p>Your Library</p>
+            </button>
+
+
+          </div>
         </div>
+        <div class="main-section">
+          
+                
+                <div class="hero-image">
+                  <div class="hero-text container">
+                    <p>999999999 MONTHLY LISTENERS</p>
+                    <h1>Queen</h1>
+                    <button type="button" class="btn play-btn">PLAY</button>
+                    <button type="button" class="btn follow-btn">FOLLOW</button>
+                    <div class="hero-links d-flex justify-content-between my-5 py-5">
+                      <h6>OVERVIEW</h6>
+                      <h6>RELATED ARTISTS</h6>
+                      <h6>ABOUT</h6>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="container-fluid album-section">
+                  <div class="row no-gutters mx-5 px-4">
+                    <div class="col-12">
+                      <div class='album-heading mt-3 mb-3'>
+                        <h2>Albums</h2>
+                      </div>
+                    </div>
+                    <div id="first-column" class="col col-lg-2 ">
+
+                        <div id="first-card" class="card">
+                          <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                          <h6 class="card-title pt-2 mb-1">
+                            Bohemian Rhapsody (The Original Soundtrack)
+                          </h6>
+                          <p class="card-text">
+                            Queen
+                          </p>
+                        </div>
+
+                    </div>
+                    <div id="second-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="third-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="fourth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="fifth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="sixth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="seventh-column" class="col col-lg-2 ">
+
+                        <div class="card">
+                          <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                          <h6 class="card-title pt-2 mb-1">
+                            Bohemian Rhapsody (The Original Soundtrack)
+                          </h6>
+                          <p class="card-text">
+                            Queen
+                          </p>
+                        </div>
+
+                    </div>
+                    <div id="eigth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="ninth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="tenth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="eleventh-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="twelfth-column" class="col col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    
+                  </div>
+                </div>  <!--end of album columns --> 
+
+                
+          </div>
+          
+        </div>
+      
       </div>
-    </div>
+                <div class="play-nav d-flex">
+
+
+                </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
