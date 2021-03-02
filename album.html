@@ -47,6 +47,7 @@
 				margin: 10px 0;
 				width: 100%;
 				background-color: grey;
+				border-radius: 3px;
 			}
 			input[type="range"]::-webkit-slider-runnable-track {
 				height: 10px;
@@ -56,15 +57,34 @@
 			}
 
 			input[type="range"]::-webkit-slider-thumb {
-				width: 10px;
+				width: 0px;
 				-webkit-appearance: none;
 				height: 10px;
 				cursor: ew-resize;
-				background: #434343;
+				background: #343534;
+				box-shadow: -80px 0 0 80px #434343;
+			}
+			input[type="range"]:hover::-webkit-slider-thumb {
 				box-shadow: -80px 0 0 80px #0db31a;
 			}
+
 			.rounded-pill {
 				background-color: #0db31a;
+			}
+			.song:hover .heart {
+				display: inline-block !important;
+			}
+			.song:hover .rounded-circle {
+				display: inline-block !important;
+			}
+			.row.m-0:hover {
+				background-color: rgb(48, 46, 46);
+			}
+			.row.m-0:hover .fas {
+				display: none;
+			}
+			.row.m-0:hover .d-none {
+				display: inline-block;
 			}
 		</style>
 	</head>
@@ -98,12 +118,24 @@
 					<div class="row m-0">
 						<div class="col-1 d-none d-md-block">
 							<i class="fas fa-music text-muted"></i>
+							<div class="border-0 p-0 m-0 d-none">
+								<svg
+									role="img"
+									height="16"
+									width="16"
+									viewBox="0 0 16 16"
+									class="Svg-ulyrgf-0 hJgLcF"
+								>
+									<path d="M4.018 14L14.41 8 4.018 2z"></path>
+								</svg>
+							</div>
 						</div>
 						<div class="col-10">
-							<p>
-								Procession - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Procession - Remastered 2011
+								<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>1:13</p></div>
@@ -113,10 +145,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Father to Son - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Father to Son - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>6:13</p></div>
@@ -126,11 +158,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
+							<p class="song">
 								White Queen (As It Began) - Remastered 2011<span
-									class="text-muted"
-									><br />Qween</span
-								>
+									class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>4:33</p></div>
@@ -140,10 +172,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Some Day One Day - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Some Day One Day - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>4:22</p></div>
@@ -153,10 +185,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								The Loser In The End - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								The Loser In The End - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>4:01</p></div>
@@ -166,10 +198,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Ogre Battle - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Ogre Battle - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>4:08</p></div>
@@ -179,11 +211,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
+							<p class="song">
 								The Fairy Feller's Master-Stroke - Remastered 2011<span
-									class="text-muted"
-									><br />Qween</span
-								>
+									class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>2:40</p></div>
@@ -193,10 +225,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Nevermore - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Nevermore - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>1:18</p></div>
@@ -206,11 +238,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
+							<p class="song">
 								The March Of The Black Queen - Remastered 2011<span
-									class="text-muted"
-									><br />Qween</span
-								>
+									class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>6:32</p></div>
@@ -220,10 +252,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Funny How Love Is - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Funny How Love Is - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>2:49</p></div>
@@ -233,10 +265,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Seven Seas Of Rhye - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Seven Seas Of Rhye - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>2:48</p></div>
@@ -246,9 +278,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
+							<p class="song">
 								See What A Fool I've Been-Live BBC Session, London/Jully 1973
-								<span class="text-muted"><br />Qween</span>
+								<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>4:22</p></div>
@@ -258,9 +292,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
+							<p class="song">
 								White Queen (As It Began)-Live At Hammersmith Odeon, London
-								<span class="text-muted"><br />Qween</span>
+								<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>5:32</p></div>
@@ -270,11 +306,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
+							<p class="song">
 								Seven Seas of Rhye - Instrumental Mix 2011<span
-									class="text-muted"
-									><br />Qween</span
-								>
+									class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>1:13</p></div>
@@ -284,8 +320,11 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Nevermore - <span class="text-muted"><br />Qween</span>
+							<p class="song">
+								Nevermore -
+								<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>1:13</p></div>
@@ -295,10 +334,10 @@
 							<i class="fas fa-music text-muted"></i>
 						</div>
 						<div class="col-10">
-							<p>
-								Procession - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+							<p class="song">
+								Procession - Remastered 2011<span class="heart d-none"
+									><i class="far fa-heart p-2"></i></span
+								><span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>1:13</p></div>
