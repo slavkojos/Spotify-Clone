@@ -38,6 +38,34 @@
 				margin: 0;
 				padding: 5px;
 			}
+			input[type="range"] {
+				overflow: hidden;
+			}
+			input[type="range"] {
+				height: 7px;
+				-webkit-appearance: none;
+				margin: 10px 0;
+				width: 100%;
+				background-color: grey;
+			}
+			input[type="range"]::-webkit-slider-runnable-track {
+				height: 10px;
+				-webkit-appearance: none;
+				color: #13bba4;
+				margin-top: -1px;
+			}
+
+			input[type="range"]::-webkit-slider-thumb {
+				width: 10px;
+				-webkit-appearance: none;
+				height: 10px;
+				cursor: ew-resize;
+				background: #434343;
+				box-shadow: -80px 0 0 80px #0db31a;
+			}
+			.rounded-pill {
+				background-color: #0db31a;
+			}
 		</style>
 	</head>
 	<body>
@@ -51,15 +79,12 @@
 						src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Queen_II_%28album_cover%29.jpg/220px-Queen_II_%28album_cover%29.jpg"
 						alt=""
 					/>
-					<h4 class="fw-bold m-0 p-0">
+					<h4 class="fw-bold m-0 pt-2">
 						Queen II (Deluxe Edition 2011 Remaster)
 					</h4>
 					<small class="text-muted m-0 p-0">Queen</small>
 					<div>
-						<button
-							type="button"
-							class="btn btn-success rounded-pill px-4 py-0 mt-3"
-						>
+						<button type="button" class="btn rounded-pill px-4 py-0 mt-3">
 							PLAY
 						</button>
 					</div>
@@ -71,7 +96,9 @@
 				</div>
 				<div class="col-12 col-md-8 col-lg-9 fs-6">
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Procession - Remastered 2011<span class="text-muted"
@@ -82,7 +109,9 @@
 						<div class="col-1 text-muted"><p>1:13</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Father to Son - Remastered 2011<span class="text-muted"
@@ -90,10 +119,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>6:13</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								White Queen (As It Began) - Remastered 2011<span
@@ -102,10 +133,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>4:33</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Some Day One Day - Remastered 2011<span class="text-muted"
@@ -113,10 +146,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>4:22</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								The Loser In The End - Remastered 2011<span class="text-muted"
@@ -124,10 +159,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>4:01</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Ogre Battle - Remastered 2011<span class="text-muted"
@@ -135,10 +172,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>4:08</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								The Fairy Feller's Master-Stroke - Remastered 2011<span
@@ -147,10 +186,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>2:40</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Nevermore - Remastered 2011<span class="text-muted"
@@ -158,10 +199,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>1:18</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								The March Of The Black Queen - Remastered 2011<span
@@ -170,10 +213,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>6:32</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Funny How Love Is - Remastered 2011<span class="text-muted"
@@ -181,10 +226,12 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>2:49</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Seven Seas Of Rhye - Remastered 2011<span class="text-muted"
@@ -192,33 +239,40 @@
 								>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>2:48</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
-								See What A Fool I've Been-Live BBC Session, London/Jully 1973 -
-								Remastered 2011<span class="text-muted"><br />Qween</span>
+								See What A Fool I've Been-Live BBC Session, London/Jully 1973
+								<span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>4:22</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
-								White Queen (As It Began)-Live At Hammersmith Odeon, London -
-								Remastered 2011<span class="text-muted"><br />Qween</span>
+								White Queen (As It Began)-Live At Hammersmith Odeon, London
+								<span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1 text-muted"><p>5:32</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
-								Procession - Remastered 2011<span class="text-muted"
+								Seven Seas of Rhye - Instrumental Mix 2011<span
+									class="text-muted"
 									><br />Qween</span
 								>
 							</p>
@@ -226,18 +280,20 @@
 						<div class="col-1 text-muted"><p>1:13</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
-								Procession - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+								Nevermore - <span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
 						<div class="col-1 text-muted"><p>1:13</p></div>
 					</div>
 					<div class="row m-0">
-						<div class="col-1"><i class="fas fa-music text-muted"></i></div>
+						<div class="col-1 d-none d-md-block">
+							<i class="fas fa-music text-muted"></i>
+						</div>
 						<div class="col-10">
 							<p>
 								Procession - Remastered 2011<span class="text-muted"
@@ -251,8 +307,10 @@
 			</div>
 			<footer class="footer fixed-bottom">
 				<div class="container-fluid">
-					<div class="row d-flex flex-row justify-content-between">
-						<div class="col d-flex flex-row justify-content-start m-0">
+					<div class="row d-flex flex-row justify-content-sm-between">
+						<div
+							class="col-12 col-md-4 d-flex justify-content-md-start align-items-center m-0"
+						>
 							<img
 								class="img-fluid"
 								src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Queen_II_%28album_cover%29.jpg/220px-Queen_II_%28album_cover%29.jpg"
@@ -264,28 +322,170 @@
 									><br />Qween</span
 								>
 							</p>
-							<i class="far fa-heart p-2 text-muted"></i>
+							<button class="bg-transparent border-0">
+								<i class="far fa-heart p-2 text-muted"></i>
+							</button>
+							<button class="bg-transparent border-0">
+								<svg
+									class="text-muted"
+									xmlns:xlink="http://www.w3.org/1999/xlink"
+									width="16"
+									height="16"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g fill="#B3B3B3" fill-rule="evenodd">
+										<path
+											d="M1 3v9h14V3H1zm0-1h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"
+											fill-rule="nonzero"
+											fill="#B3B3B3"
+										></path>
+										<path d="M10 8h4v3h-4z" fill="#B3B3B3"></path>
+									</g>
+								</svg>
+							</button>
 						</div>
-						<div class="col">
-							<div class="progress">
-								<div
-									class="progress-bar"
-									role="progressbar"
-									aria-valuenow="0"
-									aria-valuemin="0"
-									aria-valuemax="100"
-								></div>
+						<div class="col-12 col-md-6">
+							<div class="d-flex flex-row justify-content-md-center">
+								<button class="bg-transparent border-0 m-2">
+									<svg
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										height="16"
+										width="16"
+										viewBox="0 0 16 16"
+										class="Svg-ulyrgf-0 hJgLcF"
+									>
+										<path
+											d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"
+											fill="#B3B3B3"
+										/>
+										<path
+											xmlns="http://www.w3.org/2000/svg"
+											d="M4.5 6.8l.7-.8C4.1 4.7 2.5 4 .9 4v1c1.3 0 2.6.6 3.5 1.6l.1.2zm7.5 4.7c-1.2 0-2.3-.5-3.2-1.3l-.6.8c1 1 2.4 1.5 3.8 1.5V14l3.5-2-3.5-2v1.5zm0-6V7l3.5-2L12 3v1.5c-1.6 0-3.2.7-4.2 2l-3.4 3.9c-.9 1-2.2 1.6-3.5 1.6v1c1.6 0 3.2-.7 4.2-2l3.4-3.9c.9-1 2.2-1.6 3.5-1.6z"
+											fill="#B3B3B3"
+										/>
+									</svg>
+								</button>
+
+								<button class="bg-transparent border-0 m-2">
+									<svg
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										height="16"
+										width="16"
+										viewBox="0 0 16 16"
+										class="Svg-ulyrgf-0 hJgLcF"
+									>
+										<path
+											d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"
+											fill="#B3B3B3"
+										></path>
+									</svg>
+								</button>
+
+								<button class="rounded-circle border-0 p-2 m-2">
+									<svg
+										role="img"
+										height="16"
+										width="16"
+										viewBox="0 0 16 16"
+										class="Svg-ulyrgf-0 hJgLcF"
+									>
+										<path d="M4.018 14L14.41 8 4.018 2z"></path>
+									</svg>
+								</button>
+
+								<button class="bg-transparent border-0 m-2">
+									<svg
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										height="16"
+										width="16"
+										viewBox="0 0 16 16"
+										class="Svg-ulyrgf-0 hJgLcF"
+									>
+										<path
+											d="M11 3v4.119L3 2.5v11l8-4.619V13h2V3z"
+											fill="#B3B3B3"
+										></path>
+									</svg>
+								</button>
+
+								<button class="bg-transparent border-0 m-2">
+									<svg
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										height="16"
+										width="16"
+										viewBox="0 0 16 16"
+										class="Svg-ulyrgf-0 hJgLcF"
+									>
+										<path
+											d="M5.5 5H10v1.5l3.5-2-3.5-2V4H5.5C3 4 1 6 1 8.5c0 .6.1 1.2.4 1.8l.9-.5C2.1 9.4 2 9 2 8.5 2 6.6 3.6 5 5.5 5zm9.1 1.7l-.9.5c.2.4.3.8.3 1.3 0 1.9-1.6 3.5-3.5 3.5H6v-1.5l-3.5 2 3.5 2V13h4.5C13 13 15 11 15 8.5c0-.6-.1-1.2-.4-1.8z"
+											fill="#B3B3B3"
+										></path>
+									</svg>
+								</button>
+							</div>
+							<div class="d-flex justify-content-md-center align-items-center">
+								<div class="form-group text-muted">
+									<div class="d-flex justify-content-center align-items-center">
+										<span class="px-2">0:00</span>
+										<input
+											type="range"
+											id="volume"
+											name="volume"
+											min="0"
+											max="11"
+										/>
+										<span class="px-2">1:13</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col d-flex flex-row justify-content-end">
-							<div class="progress w-50">
-								<div
-									class="progress-bar"
-									role="progressbar"
-									aria-valuenow="0"
-									aria-valuemin="0"
-									aria-valuemax="100"
-								></div>
+						<div
+							class="col-12 col-md-2 d-flex justify-content-md-end align-items-center"
+						>
+							<div class="d-flex align-items-center">
+								<button class="bg-transparent border-0 mr-2">
+									<i class="fas fa-bars text-muted"></i>
+								</button>
+								<button class="bg-transparent border-0 mr-2">
+									<i class="fas fa-desktop text-muted"></i>
+								</button>
+								<button class="bg-transparent border-0 mr-2">
+									<svg
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										xmlns="http://www.w3.org/2000/svg"
+										role="img"
+										height="16"
+										width="16"
+										viewBox="0 0 16 16"
+										class="Svg-ulyrgf-0 hJgLcF"
+									>
+										<path
+											d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z"
+											fill="#B3B3B3"
+										/>
+									</svg>
+									<path
+										xmlns="http://www.w3.org/2000/svg"
+										d="M12.945 1.379l-.652.763c1.577 1.462 2.57 3.544 2.57 5.858s-.994 4.396-2.57 5.858l.651.763a8.966 8.966 0 00.001-13.242zm-2.272 2.66l-.651.763a4.484 4.484 0 01-.001 6.397l.651.763c1.04-1 1.691-2.404 1.691-3.961s-.65-2.962-1.69-3.962zM0 5v6h2.804L8 14V2L2.804 5H0zm7-1.268v8.536L3.072 10H1V6h2.072L7 3.732z"
+										fill="#B3B3B3"
+									/>
+								</button>
+							</div>
+
+							<div class="form-group">
+								<input
+									type="range"
+									class="form-control-range"
+									id="formControlRange"
+								/>
 							</div>
 						</div>
 					</div>
