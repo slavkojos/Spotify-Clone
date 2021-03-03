@@ -71,20 +71,33 @@
 			.rounded-pill {
 				background-color: #0db31a;
 			}
-			.song:hover .heart {
-				display: inline-block !important;
+			.row.m-0:hover .heart {
+				display: inline !important;
 			}
-			.song:hover .rounded-circle {
-				display: inline-block !important;
+			.row.m-0:hover .rounded-circle {
+				display: inline !important;
 			}
 			.row.m-0:hover {
 				background-color: rgb(48, 46, 46);
+				border-radius: 4px;
 			}
+
 			.row.m-0:hover .fas {
 				display: none;
 			}
-			.row.m-0:hover .d-none {
-				display: inline-block;
+			.row.m-0:hover .play {
+				display: block !important;
+			}
+			.row.m-0:hover .time .fas {
+				display: inline !important;
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			a:hover {
+				color: inherit;
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -116,9 +129,13 @@
 				</div>
 				<div class="col-12 col-md-8 col-lg-9 fs-6">
 					<div class="row m-0">
-						<div class="col-1 d-none d-md-block">
+						<div
+							class="col-1 d-none d-md-flex justify-content-center align-items-start"
+						>
 							<i class="fas fa-music text-muted"></i>
-							<div class="border-0 p-0 m-0 d-none">
+							<div
+								class="play border border-white rounded-circle p-2 d-none align-self-center"
+							>
 								<svg
 									role="img"
 									height="16"
@@ -133,12 +150,18 @@
 						<div class="col-10">
 							<p class="song">
 								Procession - Remastered 2011
-								<span class="heart d-none"
-									><i class="far fa-heart p-2"></i></span
-								><span class="text-muted"><br />Qween</span>
+								<span class="text-muted"><br />Qween</span>
 							</p>
 						</div>
-						<div class="col-1 text-muted"><p>1:13</p></div>
+						<div class="col-1">
+							<p class="time d-flex justify-content-center align-items-center">
+								<span class="heart d-none"
+									><i class="far fa-heart p-2"></i
+								></span>
+								<span class="text-muted">1:13</span>
+								<i class="fas fa-ellipsis-h p-2 d-none"></i>
+							</p>
+						</div>
 					</div>
 					<div class="row m-0">
 						<div class="col-1 d-none d-md-block">
@@ -357,9 +380,8 @@
 								style="width: 50px; height: 50px"
 							/>
 							<p>
-								Procession - Remastered 2011<span class="text-muted"
-									><br />Qween</span
-								>
+								<a href="#">Procession - Remastered 2011</a
+								><span class="text-muted"><br /><a href="#"> Qween</a></span>
 							</p>
 							<button class="bg-transparent border-0">
 								<i class="far fa-heart p-2 text-muted"></i>
