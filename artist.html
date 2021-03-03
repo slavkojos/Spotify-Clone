@@ -77,7 +77,11 @@
               </ul>
 
               <div class="sidebar-toggle">
-                <img src="assets/Spotify svg's/svgexport-34.svg" class="sidebar-arrow" alt="sidebar toggle button"/>
+                <button onclick="sidebarToggle()">
+                  <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="ot-arrow " width="15" height="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                  <path fill="#696969" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
+                  </svg>
+              </button>
               </div>
 
               <ul class="profile-section pl-0">
@@ -116,11 +120,33 @@
                 
                 <div class="hero-image">
                   <div class="hero-text container">
-                    <p>999999999 MONTHLY LISTENERS</p>
+                    <p class="monthly-listeners">99,999,999 MONTHLY LISTENERS</p>
                     <h1>Queen</h1>
-                    <button type="button" class="btn play-btn">PLAY</button>
-                    <button type="button" class="btn follow-btn">FOLLOW</button>
-                    <div class="hero-links d-flex justify-content-between my-5 py-5">
+                    <div class="btn-box mr-5">
+                      <button type="button" class="btn play-btn mr-2">PLAY</button>
+                      <button type="button" class="btn follow-btn mr-3">FOLLOW</button>
+                      <button type="button" class="btn ellipsis-btn"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve">
+                     <g>
+                       <g>
+                         <circle cx="42.667" cy="213.333" r="42.667"/>
+                       </g>
+                     </g>
+                     <g>
+                       <g>
+                         <circle cx="213.333" cy="213.333" r="42.667"/>
+                       </g>
+                     </g>
+                     <g>
+                       <g>
+                         <circle cx="384" cy="213.333" r="42.667"/>
+                       </g>
+                     </g>
+                     </svg>
+                    </button>
+                    </div>
+                   
+                    <div class="hero-links d-flex justify-content-between mt-4 pt-5 mr-5">
                       <h6>OVERVIEW</h6>
                       <h6>RELATED ARTISTS</h6>
                       <h6>ABOUT</h6>
@@ -129,9 +155,9 @@
                 </div>
                 
                 <div class="container-fluid album-section">
-                  <div class="row no-gutters mx-5 px-4">
+                  <div class="row no-gutters mx-5 px-5">
                     <div class="col-12">
-                      <div class='album-heading mt-3 mb-3'>
+                      <div class='album-heading mt-3 mb-4'>
                         <h2>Albums</h2>
                       </div>
                     </div>
@@ -320,9 +346,25 @@
 
 
                 </div>
+        
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+              const sidebarToggle = function() {
+                
+                const sidebar = document.getElementsByClassName("sidebar");
+                const mainWindow = document.getElementsByClassName("main-section");
+                if (sidebar[0].style.width < "12%") {
+                  sidebar[0].style.width = "12%"
+                  mainWindow[0].style.width = "88%"
+                }  else {
+                  sidebar[0].style.width = "0%"
+                  mainWindow[0].style.width = "100%"
+                }
+               
+              }
+    </script>
   </body>
 </html>
