@@ -1,158 +1,423 @@
+
+  
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Spotify</title>
-		<link rel="stylesheet" type="text/css" href="styles.css" />
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-		<!-- Bootstrap CSS -->
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-			crossorigin="anonymous"
-		/>
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-		<script src="https://kit.fontawesome.com/6f47b95a54.js" crossorigin="anonymous"></script>
-		<!-- My CSS -->
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<section class="mainframe">
-			<div class="main-content d-flex flex-column">
-				<div class="justify-content-center">
-					<ul class="nav justify-content-center">
-						<li class="nav-item">
-							<a class="nav-link" href="#">Trending</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Podcast</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Moods and Genes</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">New Releases</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Discover</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-      <div class="mx-5">
-        <h2 class = "index-headings d-none d-md-block">#THROWBACKTHURSDAY</h2>
-        <div class="row no-gutters d-flex">
-          <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-            <img
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6f47b95a54.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <!-- side menu -->
+    <aside>
+      <div>
+        <img src="assets/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="menu d-flex column justify-content-start align-items-center">
+            <div class="col">
+              <a href="#"> <i class="fas fa-home fa-lg"></i>Home</a>
+            </div>
+          </div>
+          <div class="menu d-flex column justify-content-start align-items-center">
+            <div class="col">
+              <a href="#"> <i class="fas fa-search fa-lg"></i>Search</a>
+            </div>
+          </div>
+          <div class="menu d-flex column justify-content-start align-items-center">
+            <div class="col">
+              <a href="#"> <i class="fas fa-book fa-lg"></i> Your library</a>
+            </div>
+          </div>
+          </div>
+        </div>
+
+       
+        <div class="stick-to-bottom-index-page">
+          <div class ="login-button-index">
+            <a href="login.html"><span>SIGN UP</span></a>
+          </div>
+          <div class ="login-button-index">
+            <a href="login.html"><span>LOGIN</span></a>
+          </div>
+          <div class="install-btn">
+            <a href="#">
+              <i class="fas fa-arrow-circle-down fa-lg"></i> Install</a
+            >
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="mainframe">
+      <!-- <a href="https://icons8.com/icon/1501/plus">Plus icon by Icons8</a> -->
+      <div class="main-content d-flex flex-column">
+        <!-- Tab heading -->
+        <div class="justify-content-center">
+          <div>
+            <ul
+              class="nav nav-tabs justify-content-center"
+              id="myTab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="trending-tab"
+                  data-toggle="tab"
+                  href="#trending"
+                  role="tab"
+                  aria-controls="trending"
+                  aria-selected="true"
+                  data-target="#homepage-headings"
+                  data-slide-to="0"
+                  >TRENDING</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="podcast-tab"
+                  data-toggle="tab"
+                  href="#podcast"
+                  role="tab"
+                  aria-controls="podcast"
+                  aria-selected="false"
+                  data-target="#homepage-headings"
+                  data-slide-to="1"
+                  >PODCAST</a
+                >
+              </li>
+              <li class="nav-item d-none d-md-flex" role="presentation">
+                <a
+                  class="nav-link"
+                  id="moods-and-genres-tab"
+                  data-toggle="tab"
+                  href="#moods-and-genres"
+                  role="tab"
+                  aria-controls="moods-and-genres"
+                  aria-selected="false"
+                  data-target="#homepage-headings"
+                  data-slide-to="2"
+                  >MOODS AND GENRES</a
+                >
+              </li>
+              <li class="nav-item d-none d-md-flex " role="presentation">
+                <a
+                  class="nav-link"
+                  id="new-releases-tab"
+                  data-toggle="tab"
+                  href="#new-releases"
+                  role="tab"
+                  aria-controls="new-releases"
+                  aria-selected="false"
+                  data-target="#homepage-headings"
+                  data-slide-to="2"
+                  >NEW RELEASES</a
+                >
+              </li>
+              <li class="nav-item d-none d-md-flex" role="presentation">
+                <a
+                  class="nav-link"
+                  id="discover-tab"
+                  data-toggle="tab"
+                  href="#discover"
+                  role="tab"
+                  aria-controls="discover"
+                  aria-selected="false"
+                  data-target="#homepage-headings"
+                  data-slide-to="2"
+                  >DISCOVER
+                </a>
+              </li>
+            <button class="dropdown-toggle d-md-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style ="background: transparent;
+            font-size: 10px;
+            border: none;
+            color: whitesmoke;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            margin-bottom: 22px;
+            margin-left: 5px;">
+              MORE
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">MOODS & GENERES</a>
+              <a class="dropdown-item" href="#">NEW RELEASES</a>
+              <a class="dropdown-item" href="#">DISCOVER</a>
+            </div>
+          </ul>
+          </div>
+        </div>
+
+       
+
+
+        <div class="mx-5">
+          <!-- End of Tab heading -->
+          <h1 class = "index-headings d-none d-md-block">#THROWBACKTHURSDAY</h1>
+          <h3 class = "index-headings d-sm d-md-none">#THROWBACKTHURSDAY</h1>
+
+          <!-- Card Design -->
+          <div class="row no-gutters d-flex">
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
                 class="card-img-top"
                 src="images/italian.png"
                 alt="spotify_playlist_1"
               />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
               <div>
                 <h6>Italian Karaoke</h6>
               </div>
-          </div>
-          <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
               <img
                 class="card-img-top"
                 src="images/lyricists.png"
                 alt="spotify_playlist_1"
               />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
               <div>
-                <h6>Italian Karaoke</h6>
+                <h6>lyricists</h6>
               </div>
-          </div>
-          <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-            <img
-              class="card-img-top"
-              src="images/frequentrot.png"
-              alt="spotify_playlist_1"
-            />
-            <div>
-              <h6>Italys Frequent Rotation</h6>
             </div>
-        </div>
-        <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-          <img
-            class="card-img-top"
-            src="images/oos.png"
-            alt="spotify_playlist_1"
-          />
-          <div>
-            <h6>00s Italy</h6>
-          </div>
-      </div>
-      <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-        <img
-          class="card-img-top"
-          src="images/cocktail.png"
-          alt="spotify_playlist_1"
-        />
-        <div>
-          <h6>cocktail Hour</h6>
-        </div>
-    </div>
-    <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-      <img
-        class="card-img-top"
-        src="images/hiphop.png"
-        alt="spotify_playlist_1"
-      />
-      <div>
-        <h6>90s Hip-Hop</h6>
-      </div>
-  </div>
-        </div>
 
-  <div class="mx-5">
-    <h2 class = "index-headings d-none d-md-block">Classifische</h2>
-    <div class="row no-gutters d-flex">
-      <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-        <img
-            class="card-img-top"
-            src="images/top50italy.png"
-            alt="spotify_playlist_1"
-          />
-          <div>
-            <h6> Top 50 - Italy</h6>
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <a href = "#">
+                <img
+                class="card-img-top"
+                src="images/queen.png"
+                alt="spotify_playlist_1"
+              /></a>
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+
+              <div>
+                <h6><a href = "/albums/albums.html">Queen</a></h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/lyricists.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>lyricists</h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/frequentrot.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+              ><i class="heart far fa-heart fa-sm mr-3"></i
+              ><i class="play fas fa-play fa-1x mr-3"></i
+              ><i class="fa fa-ellipsis-h fa-sm"></i>
+            </span>
+              <div>
+                <h6>Italys frequent rotation</h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/oos.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>00s Italy</h6>
+              </div>
+            </div>
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/cocktail.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>cocktail Hour</h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/hiphop.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>90s Hip Hop</h6>
+              </div>
+            </div>
+
           </div>
-      </div>
-      <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-          <img
-            class="card-img-top"
-            src="images/top50global.png"
-            alt="spotify_playlist_1"
-          />
-          <div>
-            <h6>Top 50 - Global</h6>
+
+          <h1 class = "index-headings d-none d-md-block mt-5">Classifichhe</h1>
+          <h3 class = "index-headings d-sm d-md-none mt-5">Classifichhe</h1>
+          <!-- Card Design -->
+          <div class="row no-gutters d-flex">
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/top50italy.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>Top 50 - Italy</h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/top50global.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>Top 50 - Global</h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/viralglobal.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>Viral 50 - Global</h6>
+              </div>
+            </div>
+
+            <div class="trending card p-0 col-12 col-md-3 col-lg-2">
+              <img
+                class="card-img-top"
+                src="images/viralitaly.png"
+                alt="spotify_playlist_1"
+              />
+              <i class="spotify-card-icon fab fa-spotify"></i>
+              <span class="overlay-icons"
+                ><i class="heart far fa-heart fa-sm mr-3"></i
+                ><i class="play fas fa-play fa-1x mr-3"></i
+                ><i class="fa fa-ellipsis-h fa-sm"></i>
+              </span>
+              <div>
+                <h6>Viral 50 - Italy</h6>
+              </div>
+            </div>
+            <!-- </div> -->
           </div>
-      </div>
-      <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-        <img
-          class="card-img-top"
-          src="images/viralglobal.png"
-          alt="spotify_playlist_1"
-        />
-        <div>
-          <h6> Viral 50 - Global</h6>
         </div>
-    </div>
-    <div class="trending card p-0 col-12 col-md-3 col-lg-2">
-      <img
-        class="card-img-top"
-        src="images/viralitaly.png"
-        alt="spotify_playlist_1"
-      />
-      <div>
-        <h6> Viral 50 -- Italy</h6>
+        <!-- End of Container Closure -->
       </div>
-  </div>
+    </section>
 
+    <script src="./js/index.js"></script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
 
-		</section>
-	</body>
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
+
