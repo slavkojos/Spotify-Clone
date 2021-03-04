@@ -59,18 +59,32 @@
   --font-family: "Circular";
 }
 
+.album-page {
+    display:flex;
+}
+
 .artist-page {
   display: flex;
 }
 
 /* SIDEBAR SECTION SIDEBAR */
-
+/* 
 .sidebar {
     
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 0%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    
+} */
+
+.sidebar {
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     background-color: rgb(0, 0, 0);
     transition: 0.5s;
     
@@ -333,6 +347,7 @@
     color: white;
     /* border-bottom: 2px solid var(--background-color); */
     border-color:  var(--background-color);
+    cursor: pointer;
     /* transform: translateY(-0.2rem); */
   }
 
@@ -382,6 +397,10 @@
   border-radius: 0px;
 }
 
+.card img:hover {
+    cursor: pointer;
+}
+
 .sidebar-btn:hover {
   background-color: rgb(92, 92, 92);
 }
@@ -395,3 +414,55 @@
 
   /*  The above css is rubbish YOU NEED TO MAKE A STICKY NAVBAR TO BOTTOM OF THE SCREEN*/
 }
+
+/*  FOOTER CSS */
+
+footer {
+    background-color: #322f2f;
+    font-size: small;
+}
+
+input[type="range"] {
+    height: 7px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+}
+#volume,
+#track-time {
+    background: linear-gradient(
+        90deg,
+        rgba(65, 255, 0, 1) 0%,
+        rgba(65, 255, 0, 1) 58%,
+        rgba(168, 168, 168, 1) 58%
+    );
+}
+#track-time {
+    width: 250px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 7px;
+    -webkit-appearance: none;
+    color: white;
+    margin-top: -10px;
+    display: none;
+}
+input[type="range"]:hover::-webkit-slider-runnable-track {
+    display: block;
+    -webkit-appearance: none;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
