@@ -141,6 +141,7 @@
       display: flex;
       align-items: center;
       justify-content: start;
+     
  }
 
  .sidebar-toggle button {
@@ -149,11 +150,13 @@
     padding: 0;
     background: none;
     border: none;
+    
  }
 
  .sidebar-toggle button svg {
      width: 200%;
      height: 2rem;
+     transition: 0.5s;
  }
 
  .sidebar-toggle button svg:hover {
@@ -322,12 +325,15 @@
     letter-spacing: 2px;
     padding-bottom: 0.3rem;
     color: rgb(165, 165, 165);
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
   }
 
   h6:hover {
     color: white;
-    border-bottom: 2px solid var(--background-color);
-    transform: translateY(-0.2rem);
+    /* border-bottom: 2px solid var(--background-color); */
+    border-color:  var(--background-color);
+    /* transform: translateY(-0.2rem); */
   }
 
 /* ------------------------END OF HERO SECTION -----------------*/
