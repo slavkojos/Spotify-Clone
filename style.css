@@ -59,16 +59,27 @@
   --font-family: "Circular";
 }
 
-.album-page {
+/* .album-page {
     display:flex;
+} */
+
+.artist-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+}
+
+.artist-page-wrapper > * {
+  padding: 20px;
 }
 
 .artist-page {
   display: flex;
+  flex-grow: 1;
 }
 
 /* SIDEBAR SECTION SIDEBAR */
-/* 
+
 .sidebar {
     
     margin: 0;
@@ -77,25 +88,8 @@
     width: 0%;
     background-color: rgb(0, 0, 0);
     transition: 0.5s;
-    
-} */
-
-.sidebar {
-    
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color: rgb(0, 0, 0);
-    transition: 0.5s;
-    
+    flex-grow: 1;
 }
-
-/* .sidebar:hover {
-    width: 12%;
-}
-  .sidebar-btn:hover .main-section {
-    width:88%;
-  } */
 
   .sidebar-btn:hover p {
     color: white;
@@ -108,6 +102,7 @@
     margin-left: 0;
     padding: 0;
     position: relative;
+    display: flex;
 }
 
 .sidebar-nav li {
@@ -118,12 +113,10 @@
     padding-right: 10%;
 }
 
-.sidebar-nav li a{
-    padding-left: 0%;
-    padding-left: 0%;
-}
 
 .sidebar-btn {
+    padding-left: 0%;
+    padding-left: 0%;
     background: transparent;
     font-family: "Circular";
     font-weight: 700;
@@ -133,15 +126,18 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
   }
   
   .sidebar-btn svg {
     margin-right: 9%;
+    
   }
 
   .sidebar-btn p {
     margin-bottom: 0px;
     color: rgb(165, 165, 165);
+    
   }
 
   .sidebar-toggle {
@@ -179,14 +175,6 @@
     height: 3rem;
 }
 
-
-
-
-
-
-
- 
-
   /* .sidebar-toggle img {
       width: 100%;
       height: 50%;
@@ -196,6 +184,9 @@
 
   .profile-section {
       overflow: hidden;
+      padding: none;
+      width: 100%;
+      flex-wrap: wrap;
   }
   .profile-section .install-app a {
     border-bottom: 1px solid white;
@@ -207,7 +198,8 @@
   }
 
   .profile-img {
-      width: 17%;
+      /* width: 17%; */
+      width: 1.8rem;
       border-radius: 50%;
       margin-right: 9%;
   }
@@ -220,8 +212,7 @@
   background-color: rgb(26, 26, 26);
   height: 100%;
   width: 100%;
-  /* position:
-    margin-left: 230px; */
+  transition: 0.5s;
 }
 
 .hero-image {
@@ -252,22 +243,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-.hero-text .monthly-listeners {
+/* .hero-text .monthly-listeners {
     margin-top: 23%;
     margin-bottom: 2%;
-}
+} */
 
 .hero-text .monthly-listeners {
     margin-top: 23%;
     margin-bottom: 1%;
     padding-bottom: 1%;
     color: rgb(228, 228, 228);
-    margin-right: 4%;
+    /* margin-right: 4%; */
     font-size: 12px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .hero-text h1 {
@@ -287,6 +278,7 @@
 .hero-text .btn-box {
     width: 75%;
     margin-top: 4%;
+    display: flex;
 }
 
 .play-btn {
@@ -399,6 +391,7 @@
 
 .card img:hover {
     cursor: pointer;
+    transform: translateY(-0.2rem); 
 }
 
 .sidebar-btn:hover {
@@ -418,12 +411,16 @@
 /*  FOOTER CSS */
 
 footer {
-    background-color: #322f2f;
+    background-color: rgb(26, 26, 26);
     font-size: small;
+    height: 10vh;
+    position: fixed;
+    border-top: 1px solid rgb(53, 53, 53);
+    margin-bottom: 0px;
 }
 
 input[type="range"] {
-    height: 7px;
+    height: 4px;
     -webkit-appearance: none;
     margin: 10px 0;
     width: 100%;
@@ -434,14 +431,15 @@ input[type="range"] {
 #track-time {
     background: linear-gradient(
         90deg,
-        rgba(65, 255, 0, 1) 0%,
-        rgba(65, 255, 0, 1) 58%,
-        rgba(168, 168, 168, 1) 58%
+        #b3b3b3  0%,
+        #b3b3b3 58%,
+        #535353 58%
     );
 }
 #track-time {
-    width: 250px;
+    width: 75%;
 }
+
 input[type="range"]::-webkit-slider-runnable-track {
     height: 7px;
     -webkit-appearance: none;
@@ -455,6 +453,16 @@ input[type="range"]:hover::-webkit-slider-runnable-track {
     color: white;
 }
 
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: 0.1rem;
+    cursor: pointer;
+  }
+
 footer a {
     text-decoration: none;
     color: white;
@@ -463,6 +471,12 @@ footer a:hover {
     color: white;
     text-decoration: underline;
 }
+
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  
 
 
 
