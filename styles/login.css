@@ -117,6 +117,9 @@
 .logbutton:hover {
   background-color: #1db954;
 }
+.logbutton:focus {
+  outline: none;
+}
 .fab {
   font-size: 15px;
 }
