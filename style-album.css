@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Geomanist";
+  src: url("//www.bu.edu/cdn/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.eot");
+  src: url("//www.bu.edu/cdn/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("//www.bu.edu/cdn/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.woff2")
+      format("woff2"),
+    url("//www.bu.edu/cdn/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.woff")
+      format("woff"),
+    url("//www.bu.edu/cdn/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.ttf")
+      format("truetype"),
+    url("//www.bu.edu/cdn/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.svg#geomanistregular")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --background-color: #1db954;
+  --font-family: "Circular";
+}
+
+.album-page {
+    display:flex;
+}
+
+/* SIDEBAR SECTION SIDEBAR */
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(0, 0, 0) !important;
+    transition: 0.5s;
+}
+
+  .sidebar-btn:hover p {
+    color: white;
+  }
+
+
+.sidebar-nav {
+    height: calc(100% - 1.5rem - 10vh);
+    margin-top: 10%;
+    margin-left: 0;
+    padding: 0;
+    position: relative;
+}
+
+.sidebar-nav li {
+    list-style-type: none;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.sidebar-nav li a{
+    padding-left: 0%;
+    padding-left: 0%;
+}
+
+.sidebar-btn {
+    background: transparent;
+    font-family: "Circular";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .sidebar-btn svg {
+    margin-right: 9%;
+  }
+
+  .sidebar-btn p {
+    margin-bottom: 0px;
+    color: rgb(165, 165, 165);
+  }
+
+  .sidebar-toggle {
+      background-color: none;
+      width: 1rem;
+      height: 6%;
+      position:absolute;
+      margin-left: 100%;
+      margin-top: 40vh;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+     
+ }
+
+ .sidebar-toggle button {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border: none;
+    
+ }
+
+ .sidebar-toggle button svg {
+     width: 200%;
+     height: 2rem;
+     transition: 0.5s;
+ }
+
+ .sidebar-toggle button svg:hover {
+    fill: var(--background-color);
+    transform: translateX(10px);
+    height: 3rem;
+}
+
+
+  /* PROFILE SECTION SIDEBAR */
+
+  .profile-section {
+      overflow: hidden;
+  }
+  .profile-section .install-app a {
+    border-bottom: 1px solid white;
+    border-radius: 0;
+  }
+
+  .profile-section profile-meta p  {
+    color: white;
+  }
+
+  .profile-img {
+      /* width: 17%; */
+      width: 1.8rem;
+      border-radius: 50%;
+      margin-right: 9%;
+  }
+  
+  /* -------------MA------------------- */
+
+.main-section {
+  background-color: rgb(26, 26, 26);
+  height: 100vh;
+}
+
+  /* width: 100%; */
+
+  h6:hover {
+    color: white;
+    /* border-bottom: 2px solid var(--background-color); */
+    border-color:  var(--background-color);
+    cursor: pointer;
+    /* transform: translateY(-0.2rem); */
+  }
+
+.sidebar-btn:hover {
+  background-color: rgb(92, 92, 92);
+}
+
+/*  FOOTER CSS */
+
+footer {
+  background-color: rgb(26, 26, 26);
+  font-size: small;
+  height: 10vh;
+  position: fixed;
+  border-top: 1px solid rgb(53, 53, 53);
+  margin-bottom: 0px;
+}
+
+input[type="range"] {
+  height: 4px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+}
+#volume,
+#track-time {
+  background: linear-gradient(
+      90deg,
+      #b3b3b3  0%,
+      #b3b3b3 58%,
+      #535353 58%
+  );
+}
+#track-time {
+  width: 75%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 7px;
+  -webkit-appearance: none;
+  color: white;
+  margin-top: -10px;
+  display: none;
+}
+input[type="range"]:hover::-webkit-slider-runnable-track {
+  display: block;
+  -webkit-appearance: none;
+  color: white;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-top: 0.1rem;
+  cursor: pointer;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+
+

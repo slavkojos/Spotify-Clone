@@ -24,9 +24,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-album.css" />
 
-    <title>New Album</title>
+    <title>Album</title>
     <style>
       @font-face {
         font-family: "Circular";
@@ -81,57 +81,7 @@
       /*input[type="range"] {
 				overflow: hidden;
 			}*/
-      input[type="range"] {
-        height: 7px;
-        -webkit-appearance: none;
-        margin: 10px 0;
-        width: 100%;
-        border-radius: 3px;
-        border: none;
-      }
-      #volume,
-      #track-time {
-        background: linear-gradient(
-          90deg,
-          rgba(65, 255, 0, 1) 0%,
-          rgba(65, 255, 0, 1) 58%,
-          rgba(168, 168, 168, 1) 58%
-        );
-      }
-
-      /* .track-time-box {
-                margin-bottom: 2%;
-            } */
-
-      #track-time {
-        width: 100%;
-      }
-
-      input[type="range"]::-webkit-slider-runnable-track {
-        height: 7px;
-        -webkit-appearance: none;
-        color: white;
-        margin-top: -10px;
-        display: none;
-      }
-      input[type="range"]:hover::-webkit-slider-runnable-track {
-        display: block;
-        -webkit-appearance: none;
-        color: white;
-      }
-      /*
-			input[type="range"]::-webkit-slider-thumb {
-				width: 0px;
-				-webkit-appearance: none;
-				height: 10px;
-				cursor: ew-resize;
-				background: #343534;
-				box-shadow: 0px 0 0 0px #434343;
-			}
-			input[type="range"]:hover::-webkit-slider-thumb {
-				box-shadow: 0px 0 0 0px #0db31a;
-				border-radius: 50px;
-			} */
+      
 
       .rounded-pill {
         background-color: #0db31a;
@@ -174,8 +124,8 @@
   </head>
   <body>
     <div class="album-page container-fluid p-0">
-      <div class="row">
-        <!-- <div class="col-2"> -->
+      <div class="row w-100">
+
         <div class="sidebar col-2">
           <div class="sidebar-nav d-flex flex-column justify-content-between">
             <ul class="nav-section pl-0">
@@ -326,11 +276,10 @@
             </ul>
           </div>
         </div>
-
-        <!-- </div> -->
-        <div class="col-10">
-          <div class="main-section">
-            <div class="container-fluid text-white">
+        
+       
+          <div class="main-section col-10">
+            <div class="container-fluid text-white w-100">
               <div class="row">
                 <div class="col-12 col-md-4 col-lg-3 text-center">
                   <img
@@ -780,15 +729,14 @@
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
+    
 
       <footer class="footer fixed-bottom">
         <div class="container-fluid">
           <div class="row d-flex flex-row justify-content-sm-between">
-            <div
-              class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start align-items-center m-0"
-            >
+            <div class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start align-items-center m-0">
               <img
                 class="img-fluid"
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Queen_II_%28album_cover%29.jpg/220px-Queen_II_%28album_cover%29.jpg"
@@ -823,7 +771,7 @@
             </div>
             <div class="col-12 col-md-6">
               <div
-                class="d-flex flex-row justify-content-center justify-content-md-center w-100"
+                class="d-flex flex-row justify-content-center justify-content-md-center w-100 mb-1"
               >
                 <button class="bg-transparent border-0 m-2">
                   <svg
@@ -923,6 +871,7 @@
                       id="track-time"
                       name="track-time"
                       oninput="onRangeInput(this.value, this)"
+                      onchange="onChange(this.value, this)"
                     />
                     <span class="px-2">1:13</span>
                   </div>
@@ -962,12 +911,14 @@
                 </button>
               </div>
 
-              <div class="form-group">
+              <div class="form-group mb-0">
                 <input
                   type="range"
                   class="form-control-range"
                   id="volume"
                   oninput="onRangeInput(this.value, this)"
+                  onchange="onChange(this.value, this)"
+                  
                 />
               </div>
             </div>
@@ -975,18 +926,30 @@
         </div>
       </footer>
     </div>
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script>
+  
       function onRangeInput(newValue, element) {
-        console.log(newValue);
-        element.style.background =
-          "linear-gradient(90deg, rgba(65, 255, 0, 1) 0%, rgba(65, 255, 0, 1)" +
-          newValue +
-          "%, rgba(168, 168, 168, 1) " +
-          newValue +
-          "%)";
-      }
+                console.log(newValue);
+                element.style.background =
+                  "linear-gradient(90deg, rgba(65, 255, 0, 1) 0%, rgba(65, 255, 0, 1)" +
+                  newValue +
+                  "%, #535353 " +
+                  newValue +
+                  "%)";
+              }
+
+              function onChange(newValue, element) {
+                console.log(newValue);
+                element.style.background =
+                  "linear-gradient(90deg, rgb(179, 179, 179) 0%, rgb(179, 179, 179)" +
+                  newValue +
+                  "%, #535353 " +
+                  newValue +
+                  "%)";
+              }
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
