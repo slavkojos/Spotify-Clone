@@ -49,5 +49,7 @@ function renderData(data) {
 window.onload = function () {
   const params = new URLSearchParams(window.location.search);
   console.log(window.location.search);
-  fetchData(location.search.slice(1, location.search.length));
+  let id = parseInt(params.get("id"));
+  console.log("id", id);
+  fetchData(id);
 };

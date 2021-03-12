@@ -93,7 +93,7 @@
 .sidebar-nav li {
 	list-style-type: none;
 	margin-bottom: 0.2rem;
-	width: 100%;
+	/* width: 100%; */
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -447,4 +447,19 @@ footer a:hover {
 
 input[type='range']:focus {
 	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+@media (max-width: 768px) {
+  .nav-section li a p {
+    display: none;
+  }
+  .profile-section li a p {
+    display: none;
+  }
+}
+@media (max-width: 414px) {
+  .sidebar {
+      display: none;
+  }
+  
 }
