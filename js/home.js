@@ -54,7 +54,7 @@ const headers = {
     // M3-D2
   
     const search = (q) => {
-      fetch(`https://rapidapi.p.rapidapi.com/search?q=${q}`, {
+      fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${q}`, {
         method: "GET",
         headers,
       })
