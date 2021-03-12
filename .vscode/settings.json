@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Circular, Menlo, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "Circular, Menlo, Monaco, 'Courier New', monospace",
+    "liveServer.settings.port": 5501
 }

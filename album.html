@@ -950,6 +950,32 @@
                   newValue +
                   "%)";
               }
+
+              const sidebarToggle = function() {
+                
+                const sidebar = document.getElementsByClassName("sidebar");
+                const mainWindow = document.getElementsByClassName("main-section");
+                if (sidebar.classList.contains("col-2")) {
+                  // sidebar.hide();
+                  mainWindow.classList.remove("col-10")
+                  mainWindow.classList.add("col-12")
+                } else {
+                  sidebar.classList.add("col-2");
+                  mainWindow.classList.remove("col-12")
+                  mainWindow.classList.add("col-10")
+                }
+               }
+            
+                
+                // if (sidebar[0].style.width < "12%") {
+                //   sidebar[0].style.width = "12%"
+                //   mainWindow[0].style.width = "88%"
+                // }  else {
+                //   sidebar[0].style.width = "0%"
+                //   mainWindow[0].style.width = "100%"
+                // }
+               
+              
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
